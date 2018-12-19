@@ -1,0 +1,34 @@
+{
+  "name": "mpesalib",
+  "version": "0.0.1",
+  "keywords": [
+    "Daraja API",
+    "Mpesa API",
+    "mpesa",
+    "mpesa nodejs",
+    "mpesa node"
+  ],
+  "author": "John Simiyu",
+  "contributors": [],
+  "dependencies": {},
+  "description": "Daraja API for mpesa",
+  "main": "src/daraja.js",
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matrixjnr/mpesa-node-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matrixjnr/mpesa-node-api/issues"
+  },
+  "homepage": "https://github.com/matrixjnr/mpesa-node-api#readme"
+}
