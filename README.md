@@ -3,8 +3,8 @@
 [![Dependency Status](https://david-dm.org/matrixjnr/mpesa-node-api.svg)](https://david-dm.org/matrixjnr/mpesa-node-api)
 [![devDependencies Status](https://david-dm.org/matrixjnr/mpesa-node-api.svg)](https://david-dm.org/matrixjnr/mpesa-node-api?type=dev)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/matrixjnr/mpesa-node-api/issues)
-[![Known Vulnerabilities](https://snyk.io/test/github/matrixjnr/mpesa-node-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matrixjnr/mpesa-node-api?targetFile=package.json)
 ![Licence](https://img.shields.io/github/license/matrixjnr/mpesa-node-api.svg)
+
 # Mpesa-Node-API(mpesalib)
 
 mpesalib is a Node.js library for Safaricom Daraja API
