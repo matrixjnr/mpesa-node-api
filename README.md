@@ -1,8 +1,8 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/matrixjnr/mpesa-node-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matrixjnr/mpesa-node-api?targetFile=package.json)
+
 # Mpesa-Node-API(mpesalib)
 
 mpesalib is a Node.js library for Safaricom Daraja API
-
-[![Known Vulnerabilities](https://snyk.io/test/github/matrixjnr/mpesa-node-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matrixjnr/mpesa-node-api?targetFile=package.json)
 
 ## Requirements
 
