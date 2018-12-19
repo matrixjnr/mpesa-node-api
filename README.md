@@ -1,5 +1,10 @@
+[![Build Status](https://travis-ci.org/matrixjnr/mpesa-node-api.svg?branch=master)](https://travis-ci.org/matrixjnr/mpesa-node-api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d8ac8839553e770816e5/maintainability)](https://codeclimate.com/github/matrixjnr/mpesa-node-api/maintainability)
+[![Dependency Status](https://david-dm.org/matrixjnr/mpesa-node-api.svg)](https://david-dm.org/matrixjnr/mpesa-node-api)
+[![devDependencies Status](https://david-dm.org/matrixjnr/mpesa-node-api.svg)](https://david-dm.org/matrixjnr/mpesa-node-api?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/matrixjnr/mpesa-node-api/issues)
 [![Known Vulnerabilities](https://snyk.io/test/github/matrixjnr/mpesa-node-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matrixjnr/mpesa-node-api?targetFile=package.json)
-
+![Licence](https://img.shields.io/github/license/matrixjnr/mpesa-node-api.svg)
 # Mpesa-Node-API(mpesalib)
 
 mpesalib is a Node.js library for Safaricom Daraja API
@@ -7,12 +12,12 @@ mpesalib is a Node.js library for Safaricom Daraja API
 ## Requirements
 
 1. Node v10+ recommended.
-2. Yarn* (optional) You can still use npm
-3. ES7 knowledge
+2. npm v6
+3. ES7/ES6 foundation
 
 You need the following for the .env file:
 1. Consumer Key and Consume Secret
-2. Test Credentials *(Optional only for sandbox)*
+2. Test Credentials
 3. API prefix which is the environment
 4. Certificate Path
 5. Short Code, Phone Number and anything that can be passed to the configuration file
@@ -54,13 +59,12 @@ await mpesaApp
 var Mpesa = require('mpesalib').lipanampesa;
 ```
 
-## Pending Stuff
+## To Do
 
-- [ ] E2E Integration Tests
+- [ ] Tests
 - [ ] Detailed Documentation
-- [ ] Enumify
-- [ ] Validators for MSISDN and other expected inputs
-- [ ] More detailed Unit tests
+- [ ] Data validation
+- [ ] Code Refactoring
 
 ## Contributing
 1. Create your feature branch: `git checkout -b my-new-feature`
@@ -68,11 +72,10 @@ var Mpesa = require('mpesalib').lipanampesa;
 3. Push to the branch: `git push origin my-new-feature`
 4. Submit a pull request :D
 
-## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 I did not write tests so if you wish you can include tests for existing functions.
 Please make sure to update tests as appropriate.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Say Hi
+[John on Whatsapp](https://api.whatsapp.com/send?phone=254798283876&text=Hello)

@@ -1,6 +1,6 @@
 {
   "name": "mpesalib",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Mpesa Daraja API Library",
   "main": "src/mpesalib.js",
   "directories": {
