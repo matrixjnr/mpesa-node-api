@@ -14,11 +14,14 @@ module.exports.bal = async function(data){
     const auth = "Bearer " + oauth_token;
     
     data = {
-        "ShortCode":" ",
-        "CommandID":"CustomerPayBillOnline",
-        "Amount":" ",
-        "Msisdn":" ",
-        "BillRefNumber":" "
+        "Initiator":" ",
+        "SecurityCredential":" ",
+        "CommandID":"AccountBalance",
+        "PartyA":" ",
+        "IdentifierType":"4",
+        "Remarks":" ",
+        "QueueTimeOutURL":"https://ip_address:port/timeout_url",
+        "ResultURL":"https://ip_address:port/result_url"
     };
     
     const options = {

@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "11"
+  - "10"
+  - "9"
+  - "8"
+jobs:
+  include:
+    - stage: npm release
+      node_js: "8"
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        api_key: cs8Xd5fxCj/WEE2F1OCFQx8TeLpoq7DxGi0N3WTAr21hZK6sKn/cofSwqagSSmlALnLtwND7uYqGCO2v+ck3J7QGX4fNLN0tjYrndlG+BZuniHlrOWhmc+oQD2ltA5SYt5aEsW/w+vjr/sKGwuvr/DfQX6TsoWrpkYWppY421rKw8hJDxj6VtYgvfqvU7WjnxLWnZp7tH5Z3h7NbNH+iO09H7XNHHqc4JQmwHRmKiJV5BMUBwLj7fcKBr1zGksQ7GIbIMYE1ZdffgWHcYUSb7INGOjEQ2FxskBIuxRfFjYd576RH8q09rYP/if4UdVzwZjyaKN0Tndzwl47W7CbFoYSiwOgi1WkmHhjMY7Y3Tk9bEyUEJUS8Mf6rH+X08EaSH9gEEuEIoHsQmnU5pwB7Vs6xEHe5VTncq1rt6vBAQ+0iFNo+4XmtDYJuNPMSA+lTdyY3uBRNQvm32O/OxZSA5ForGBekV9GebOz3NAjY3VtmgTsFYn5LKpwQ62o7p5FjvWbP75qgdYYa+wRmWrP2y96dRdilzmw18IHyW6YanUi3YYJ4wEmIJvvzRlk0JMymkYqsc5R4lzhIlNyds56FT2GtM3Eq7cbUxgaKKDZeAZvgtwcaR3DH9vz/bIujhEtb9VzI29Zyuk3+eBCzf6HZAmucPzZGQobSWMUC8tZGgtE=
+        on: deploy-npm-release

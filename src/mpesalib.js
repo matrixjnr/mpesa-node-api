@@ -17,7 +17,7 @@ var {
 }= require('./routes');
 
 class Mpesa{
-    constructor(key, secret, certPath, environment){
+    constructor(){
         this.key = key === config.config.consumer_key;
         this.secret = secret === config.config.consumer_secret;
         this.environment = environment === config.config.prefix;
@@ -64,3 +64,5 @@ class Mpesa{
         return tstatus.bind(this)(...arguments);
     }
 }
+
+module.exports.mpesalib = Mpesa;
