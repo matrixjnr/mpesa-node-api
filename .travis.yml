@@ -2,21 +2,16 @@ sudo: true
 
 language: node_js
 node_js:
-  - "11"
   - "10"
   - "9"
   - "8"
-  
-before_install:
-    - sudo npm install
-    - cd /src
 
 cache:
   directories:
     - node_modules
     
 script:
-    - node mpesalib.js
+    - node src/mpesalib.js
 jobs:
   include:
     - stage: npm release
