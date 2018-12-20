@@ -32,7 +32,6 @@ npm install mpesalib
 ```
 
 ## Usage
-Please do not use the module as imported functions.
 
 ```node
 'use strict';
