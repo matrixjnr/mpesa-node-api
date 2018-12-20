@@ -2,8 +2,8 @@
 
 var dotenv = require('dotenv');
 dotenv.config();
-module.exports.config = {
-  prefix: process.env.API_PREFIX,
+const config = {
+  environment: process.env.API_ENVIRONMENT,
   baseURL: process.env.API_URL,
   consumer_key: process.env.CONSUMER_KEY,
   consumer_secret: process.env.CONSUMER_SECRET,
@@ -11,3 +11,5 @@ module.exports.config = {
   shortcode: process.env.SHORT_CODE,
   certpath: process.env.CERT_PATH
 };
+
+module.exports = config;

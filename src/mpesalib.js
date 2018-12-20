@@ -1,68 +1,54 @@
 'use strict';
 
 //The mpesa module
-const request = require('request');
-const config = require('./config');
-const util = require('./utils');
-var {
-    b2b,
-    b2c,
-    bal,
-    c2b,
-    c2bsimulate,
-    lipanampesa,
-    lnpquery,
-    reversal,
-    tstatus
-}= require('./routes');
+//Need to find a work around to import routes as a single bundle
+const config = require('../src/config/config.js');
+const b2c = require('../src/routes/b2cclass.js');
+const b2b = require('../src/routes/b2bclass.js');
+const bal = require('..src/routes/balclass.js');
+const c2b = require('../src/routes/c2bclass.js');
+const c2bsimulate =require('../src/routes/c2bclass.js');
+const lipanampesa = require('../src/routes/lpmclass.js');
+const lnpquery = require('../src/routes/lquery.js');
+const reversal = require('../src/routes/revclass.js');
+const tstatus = require('../src/routes/statusclass.js');
+const util = require('../src/utils/mpesautils.js');
 
 class Mpesa{
-    constructor(){
-        this.key = key === config.config.consumer_key;
-        this.secret = secret === config.config.consumer_secret;
-        this.environment = environment === config.config.prefix;
-        this.certPath = certPath === config.config.certPath;
-        this.baseURL = "https://" + config.config.prefix + "." + config.config.baseURL;
-        this.request = request.bind(this);
-        this.security = () => {
-            return security(this.config.config.certPath, this.util.oauth.passcode);
-        };
+    constructor(consumer_key = config.consumer_key, consumer_secret = config.consumer_secret, cert = config.cert, environment = config.environment){
+        this.consumer_key = consumer_key;
+        this.consumer_secret = consumer_secret;
+        this.cert = cert;
+        this.environment = environment;
     }
     
-    bal() {
-        return bal.bind(this)(...arguments);
-    }
-
-    b2b() {
-        return b2b.bind(this)(...arguments);
-    }
-
-    b2c() {
-        return b2c.bind(this)(...arguments);
-    }
-  
-    c2b() {
-        return c2b.bind(this)(...arguments);
-    }
-    c2bsimulate() {
-        return c2bsimulate.bind(this)(...arguments);
-    }
-
-    lipanampesa () {
-        return lipanampesa.bind(this)(...arguments);
-    }
-
-    lnpquery () {
-        return lnpquery.bind(this)(...arguments);
-    }
-
-    reversal () {
-        return reversal.bind(this)(...arguments);
-    }
-          
-    tstatus () {
-        return tstatus.bind(this)(...arguments);
-    }
+    async MpesaB2C(){
+        return await b2c;
+    };
+    async MpesaB2B(){
+        return await b2b;
+    };
+    async MpesaBAL(){
+        return await bal;
+    };
+    async MpesaC2B(){
+        return await c2b;
+    };
+    async MpesaC2Bs(){
+        return await c2bsimulate;
+    };
+    async MpesaBLIPANAMPESA(){
+        return await lipanampesa;
+    };
+    async MpesaLIPAQuery(){
+        return await lnpquery;
+    };
+    async MpesaREVERSAL(){
+        return await reversal;
+    };
+    async MpesaTSTATUS(){
+        return await tstatus;
+    };
 }
 
-module.exports.mpesalib = Mpesa;
+module.exports = Mpesa;

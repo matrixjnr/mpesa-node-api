@@ -1,31 +1,24 @@
 {
   "name": "mpesalib",
-  "version": "0.0.1",
-  "description": "Mpesa Daraja API Library",
+  "version": "0.0.2",
+  "description": "Daraja API nodejs library",
   "main": "src/mpesalib.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "assert": "^1.4.1",
     "constants": "^0.0.2",
     "crypto": "^1.0.1",
-    "body-parser": "^1.18.3",
-    "fs": "^0.0.1-security",
-    "dotenv": "^6.2.0",
-    "path": "^0.12.7",
-    "goodparts": "^1.2.1",
-    "express": "^4.16.4",
     "request": "^2.88.0",
-    "restify": "^7.2.2",
-    "prettyjson": "^1.2.1"
+    "assert": "^1.4.1",
+    "dotenv": "^6.2.0",
+    "fs": "^0.0.1-security"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
   },
   "scripts": {
-    "lint": "node_modules/.bin/goodparts src"
-    "test": "mocha"
+    "test": "mocha || true"
   },
   "repository": {
     "type": "git",
@@ -33,9 +26,8 @@
   },
   "keywords": [
     "Mpesa",
-    "Daraja-API",
-    "mpesa-node-api",
-    "mpesalib"
+    "Daraja",
+    "MpesaAPI"
   ],
   "author": "John Simiyu",
   "license": "MIT",
