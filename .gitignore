@@ -62,3 +62,6 @@ typings/
 
 #IDE Configurations
 nbproject/
+
+#JSHint files
+.jshintrc

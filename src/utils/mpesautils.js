@@ -7,7 +7,7 @@ var crypto = require('crypto');
 
 //get the encryption key and request for access token
 
-function mpesautils(consumer_key, consumer_secret, cert, url){
+function mpesautils(consumer_key = config.consumer_key, consumer_secret = config.consumer_secret, cert = config.cert, url){
     this.key = consumer_key;
     this.secret = consumer_secret;
     this.cert = cert;
@@ -25,7 +25,7 @@ function mpesautils(consumer_key, consumer_secret, cert, url){
         return passcode;
     }
 
-    async function authenticate(){
+    function authenticate(){
         const consumer_key = fs.readFileSync(config.consumer_key);
         const consumer_secret = fs.readFileSync(config.consumer_secret);
         const auth = "Basic " + new Buffer(consumer_key + ":" + consumer_secret).toString("base64");
@@ -49,7 +49,7 @@ function mpesautils(consumer_key, consumer_secret, cert, url){
             }
         }
 
-        const access_tokens = await request(options, cb);
+        const access_tokens = request(options, cb);
 
         return access_tokens;
     }
