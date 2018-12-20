@@ -15,38 +15,38 @@ const tstatus = require('../src/routes/statusclass.js');
 const util = require('../src/utils/mpesautils.js');
 
 class Mpesa{
-    constructor(consumer_key = config.consumer_key, consumer_secret = config.consumer_secret, cert = config.cert, environment = config.environment){
+    constructor(consumer_key=config.consumer_key, consumer_secret=config.consumer_secret, cert=config.cert, environment=config.environment) {
         this.consumer_key = consumer_key;
         this.consumer_secret = consumer_secret;
         this.cert = cert;
         this.environment = environment;
     }
     
-    async MpesaB2C(){
+    async MpesaB2C() {
         return await b2c;
     };
-    async MpesaB2B(){
+    async MpesaB2B() {
         return await b2b;
     };
-    async MpesaBAL(){
+    async MpesaBAL() {
         return await bal;
     };
-    async MpesaC2B(){
+    async MpesaC2B() {
         return await c2b;
     };
-    async MpesaC2Bs(){
+    async MpesaC2Bs() {
         return await c2bsimulate;
     };
-    async MpesaBLIPANAMPESA(){
+    async MpesaBLIPANAMPESA() {
         return await lipanampesa;
     };
-    async MpesaLIPAQuery(){
+    async MpesaLIPAQuery() {
         return await lnpquery;
     };
-    async MpesaREVERSAL(){
+    async MpesaREVERSAL() {
         return await reversal;
     };
-    async MpesaTSTATUS(){
+    async MpesaTSTATUS() {
         return await tstatus;
     };
 }

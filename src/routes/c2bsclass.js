@@ -5,7 +5,7 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class c2bsclass extends MpesaFactory{
-    constructor(ShortCode, CommandID = 'CustomerPayBillOnline', Amount, Msisdn, BillRefNumber){
+    constructor(ShortCode, CommandID='CustomerPayBillOnline', Amount, Msisdn, BillRefNumber) {
         super();
         this.ShortCode = ShortCode; //Username
         this.CommandID = CommandID;
@@ -13,7 +13,7 @@ class c2bsclass extends MpesaFactory{
         this.Msisdn = Msisdn;
         this.BillRefNumber = BillRefNumber;
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/c2b/v1/registerurl";
         const auth = "Bearer " + access_token;
         const json = {
@@ -36,7 +36,7 @@ class c2bsclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -46,6 +46,6 @@ class c2bsclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = c2bsclass;

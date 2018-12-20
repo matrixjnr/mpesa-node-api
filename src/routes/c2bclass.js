@@ -5,14 +5,14 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class c2bclass extends MpesaFactory{
-    constructor(ShortCode, ResponseType, ConfirmationURL, ValidationURL){
+    constructor(ShortCode, ResponseType, ConfirmationURL, ValidationURL) {
         super();
         this.ShortCode = ShortCode; //Username
         this.ResponseType = ResponseType;
         this.ConfirmationURL = ConfirmationURL;
         this.ValidationURL = ValidationURL;
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/c2b/v1/registerurl";
         const auth = "Bearer " + access_token;
         let json = {
@@ -34,7 +34,7 @@ class c2bclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -44,6 +44,6 @@ class c2bclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = c2bclass;

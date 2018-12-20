@@ -5,14 +5,14 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class lqclass extends MpesaFactory{
-    constructor(BusinessShortCode, Password, Timestamp, CheckoutRequestID){
+    constructor(BusinessShortCode, Password, Timestamp, CheckoutRequestID) {
         super();
         this.BusinessShortCode = BusinessShortCode;
         this.Password = Password;
         this.Timestamp = Timestamp;
         this.CheckoutRequestID = CheckoutRequestID;
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/stkpushquery/v1/query";
         const auth = "Bearer " + access_token;
         const json = {
@@ -34,7 +34,7 @@ class lqclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -44,6 +44,6 @@ class lqclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = lqclass;

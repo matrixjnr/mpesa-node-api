@@ -12,7 +12,7 @@ function mpesautils(consumer_key, consumer_secret, cert, url){
     this.secret = consumer_secret;
     this.cert = cert;
     this.url = url;
-    
+
     function passcode(){
         const b2e = Buffer.from(config.shortcode);
         const data = fs.readFileSync(config.certpath);
@@ -23,13 +23,13 @@ function mpesautils(consumer_key, consumer_secret, cert, url){
         }, b2e);
         const passcode = encrypted.toString('base64');
         return passcode;
-    };
-    
+    }
+
     async function authenticate(){
         const consumer_key = fs.readFileSync(config.consumer_key);
         const consumer_secret = fs.readFileSync(config.consumer_secret);
         const auth = "Basic " + new Buffer(consumer_key + ":" + consumer_secret).toString("base64");
-    
+
         const options = {
             method: 'GET',
             url: mpesautils.url,
@@ -47,13 +47,13 @@ function mpesautils(consumer_key, consumer_secret, cert, url){
                 const result = 'Error obtaining access tokens';
                 return result;
             }
-        };
-        
+        }
+
         const access_tokens = await request(options, cb);
-    
+
         return access_tokens;
-    };
-};
+    }
+}
 
 mpesautils.key = config.consumer_key;
 mpesautils.secret = config.consumer_secret;

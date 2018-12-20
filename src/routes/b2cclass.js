@@ -5,7 +5,7 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class b2cclass extends MpesaFactory{
-    constructor(InitiatorName, SecurityCredential, CommandID = 'BusinessPayment', Amount, PartyA, PartyB, Remarks, QueueTimeOutURL, ResultURL, Occasion){
+    constructor(InitiatorName, SecurityCredential, CommandID='BusinessPayment', Amount, PartyA, PartyB, Remarks, QueueTimeOutURL, ResultURL, Occasion) {
         super();
         this.InitiatorName = InitiatorName; //Username
         this.SecurityCredential = SecurityCredential;
@@ -19,7 +19,7 @@ class b2cclass extends MpesaFactory{
         this.Occasion = Occasion;
         
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/b2c/v1/paymentrequest";
         const auth = "Bearer " + access_token;
         let json = {
@@ -47,7 +47,7 @@ class b2cclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -57,6 +57,6 @@ class b2cclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = b2cclass;

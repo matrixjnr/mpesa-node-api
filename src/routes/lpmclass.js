@@ -5,7 +5,7 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class lpmclass extends MpesaFactory{
-    constructor(BusinessShortCode, Password, Timestamp, TransactionType = 'CustomerPayBillOnline', Amount, PartyA, PartyB, PhoneNumber, CallBackURL, AccountReference, TransactionDesc){
+    constructor(BusinessShortCode, Password, Timestamp, TransactionType='CustomerPayBillOnline', Amount, PartyA, PartyB, PhoneNumber, CallBackURL, AccountReference, TransactionDesc) {
         super();
         this.BusinessShortCode = BusinessShortCode;
         this.Password = Password;
@@ -19,7 +19,7 @@ class lpmclass extends MpesaFactory{
         this.AccountReference = AccountReference;
         this.TransactionDesc = TransactionDesc;
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/stkpush/v1/processrequest";
         const auth = "Bearer " + access_token;
         const json = {
@@ -48,7 +48,7 @@ class lpmclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -58,6 +58,6 @@ class lpmclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = lpmclass;

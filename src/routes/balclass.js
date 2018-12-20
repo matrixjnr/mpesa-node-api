@@ -5,7 +5,7 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class balclass extends MpesaFactory{
-    constructor(Initiator, SecurityCredential, CommandID = 'AccountBalance', PartyA, IdentifierType = '4', Remarks, QueueTimeOutURL, ResultURL, Occasion){
+    constructor(Initiator, SecurityCredential, CommandID='AccountBalance', PartyA, IdentifierType='4', Remarks, QueueTimeOutURL, ResultURL, Occasion) {
         super();
         this.Initiator = Initiator; //Username
         this.SecurityCredential = SecurityCredential;
@@ -18,7 +18,7 @@ class balclass extends MpesaFactory{
         this.Occasion = Occasion;
         
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/accountbalance/v1/query";
         const auth = "Bearer " + access_token;
         let json = {
@@ -44,7 +44,7 @@ class balclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -54,6 +54,6 @@ class balclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = balclass;

@@ -5,7 +5,7 @@ const access_token = require('../utils/mpesautils.js');
 const config = require('../config/config.js');
 
 class rclass extends MpesaFactory{
-    constructor(Initiator, SecurityCredential, CommandID = 'TransactionReversal', TransactionID, Amount, ReceiverParty, RecieverIdentifierType = '4', ResultURL, QueueTimeOutURL, Remarks, Occasion){
+    constructor(Initiator, SecurityCredential, CommandID='TransactionReversal', TransactionID, Amount, ReceiverParty, RecieverIdentifierType='4', ResultURL, QueueTimeOutURL, Remarks, Occasion) {
         super();
         this.Initiator = Initiator; //Username
         this.SecurityCredential = SecurityCredential;
@@ -19,7 +19,7 @@ class rclass extends MpesaFactory{
         this.ResultURL = ResultURL;
         this.Occasion = Occasion;
     }
-    async instance(){
+    async instance() {
         const url = "https://" + config.environment + "." + "safaricom.co.ke/mpesa/reversal/v1/request";
         const auth = "Bearer " + access_token;
         const json = {
@@ -48,7 +48,7 @@ class rclass extends MpesaFactory{
         return result;
     };
     
-    cb(er, response, body){
+    cb(er, response, body) {
         if(!er && response.statusCode === 200){
             const result = JSON.stringify(body);
             return result;
@@ -58,6 +58,6 @@ class rclass extends MpesaFactory{
         }
     };
     
-};
+}
 
 module.exports = rclass;

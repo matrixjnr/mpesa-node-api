@@ -15,10 +15,11 @@
     "fs": "^0.0.1-security"
   },
   "devDependencies": {
+    "jshint": "^2.9.7",
     "mocha": "^5.2.0"
   },
   "scripts": {
-    "test": "mocha || true"
+    "test": "jshint src/mpesalib.js"
   },
   "repository": {
     "type": "git",
