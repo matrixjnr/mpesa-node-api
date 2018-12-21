@@ -1,7 +1,7 @@
 'use strict';
 //account balance
 var MpesaFactory = require('../instance/instance.js');
-const access_token = require('../utils/mpesautils.js');
+const access_token = require('../utils/mpesautils.js').authenticate;
 const config = require('../config/config.js');
 
 class balclass extends MpesaFactory{

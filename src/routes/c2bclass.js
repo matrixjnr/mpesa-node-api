@@ -1,7 +1,7 @@
 'use strict';
 //c2b
 var MpesaFactory = require('../instance/instance.js');
-const access_token = require('../utils/mpesautils.js');
+const access_token = require('../utils/mpesautils.js').authenticate;
 const config = require('../config/config.js');
 
 class c2bclass extends MpesaFactory{
