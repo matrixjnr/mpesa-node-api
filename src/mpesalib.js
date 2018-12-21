@@ -1,5 +1,5 @@
 'use strict';
-'use esversion : 6';
+/* jshint -W097 */
 
 //The mpesa module
 //Need to find a work around to import routes as a single bundle
