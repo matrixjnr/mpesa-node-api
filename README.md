@@ -7,7 +7,7 @@
 # Mpesa-Node-API(mpesalib)
 
 mpesalib is a Node.js library for Safaricom Daraja API
-Made for OOP developers with love.
+Made for OOP developers with love. You don't need to know the architecture of the Daraja API, just import the functions and pass correct arguments to the function and implement a method that returns a response from function.instance.
 
 ## Requirements
 
@@ -39,7 +39,7 @@ var Mpesa = require('mpesalib');
 //create a new instance
 var MpesaApp = new Mpesa();
 
-await MpesApp.MpesaC2Bs(901292, 254798283876, 1000, 'ref-id');
+await MpesaApp.MpesaC2Bs(901292, 254798283876, 1000, 'ref-id');
 
 ```
 
@@ -47,6 +47,7 @@ await MpesApp.MpesaC2Bs(901292, 254798283876, 1000, 'ref-id');
 
 ```node
 'use strict';
+//imports the b2b mpesa api
 var Mpesa = require('mpesalib').MpesaB2B;
 ```
 
