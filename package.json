@@ -10,7 +10,7 @@
     "constants": "^0.0.2",
     "crypto": "^1.0.1",
     "request": "^2.88.0",
-    "assert": "^1.4.1",
+    "assert": "^1.5.0",
     "dotenv": "^6.2.0",
     "fs": "^0.0.1-security"
   },
