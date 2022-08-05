@@ -12,7 +12,7 @@
     "request": "^2.88.0",
     "assert": "^1.4.1",
     "dotenv": "^6.2.0",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.2"
   },
   "devDependencies": {
     "jshint": "^2.9.7",
