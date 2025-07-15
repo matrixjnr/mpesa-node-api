@@ -447,7 +447,7 @@ npm run test:watch
 
 ## Changelog
 
-### v2.0.0 (Latest)
+### v3.0.0 (Latest)
 
 - ✨ Complete TypeScript rewrite
 - ✨ Modern async/await API
