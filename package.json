@@ -1,25 +1,47 @@
 {
   "name": "mpesalib",
-  "version": "0.0.2",
-  "description": "Daraja API nodejs library",
-  "main": "src/mpesalib.js",
+  "version": "3.0.0",
+  "description": "A robust Node.js library for Safaricom's Daraja API with complete TypeScript support and modern async/await patterns",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
-    "test": "test"
+    "test": "test",
+    "src": "src",
+    "dist": "dist",
+    "docs": "docs"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "dependencies": {
-    "constants": "^0.0.2",
-    "crypto": "^1.0.1",
-    "request": "^2.88.2",
-    "assert": "^1.4.1",
-    "dotenv": "^6.2.0",
-    "fs": "^0.0.2"
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "joi": "^17.13.0",
+    "moment": "^2.30.0"
   },
   "devDependencies": {
-    "jshint": "^2.9.7",
-    "mocha": "^5.2.0"
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.0",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.5.0"
   },
   "scripts": {
-    "test": "jshint src/mpesalib.js"
+    "build": "rimraf dist && tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "npm run build",
+    "docs": "typedoc src --out docs"
   },
   "repository": {
     "type": "git",
