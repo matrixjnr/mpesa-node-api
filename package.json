@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "jshint": "^2.9.7",
-    "mocha": "^5.2.0"
+    "mocha": "^11.7.1"
   },
   "scripts": {
     "test": "jshint src/mpesalib.js"
