@@ -4,6 +4,7 @@
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://github.com/matrixjnr/mpesa-node-api/workflows/CI/badge.svg)](https://github.com/matrixjnr/mpesa-node-api/actions)
+[![Known Vulnerabilities](https://snyk.io/test/github/matrixjnr/mpesa-node-api/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matrixjnr/mpesa-node-api?targetFile=package.json)
 [![Coverage Status](https://coveralls.io/repos/github/matrixjnr/mpesa-node-api/badge.svg?branch=main)](https://coveralls.io/github/matrixjnr/mpesa-node-api?branch=main)
 
 A robust, modern Node.js library for integrating with Safaricom's M-Pesa Daraja API. Built with TypeScript, comprehensive error handling, and extensive testing.
